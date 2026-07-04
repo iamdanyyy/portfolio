@@ -29,7 +29,7 @@ properties under `prefers-color-scheme: dark`.
 | --- | --- | --- |
 | Palette | `--bg`, `--surface`, `--ink`, `--ink-soft`, `--ink-mute`, `--ink-faint`, `--line`, `--line-soft` | Warm grayscale base. `--ink-faint` is decorative-only to keep body text AA-compliant. |
 | Accent | `--accent`, `--accent-tint`, `--accent-tint-hover`, `--accent-border`, `--accent-glow` | Muted gold (ochre in light mode, soft gold in dark), used sparingly: text links, section/project numbers, primary CTA fill, availability pulse dot, one backdrop glow. AA-checked in both schemes. |
-| Glass | `--glass-bg`, `--glass-bg-hover`, `--glass-border`, `--glass-shine`, `--glass-shine-weak`, `--glass-blur`, `--glass-shadow` | iOS-26-style liquid-glass bubble recipe (blur 5px, inset highlights, top + left shine hairlines via pseudo-elements) applied to every surface component: nav pill, buttons, facts card, stack rows, project cards, tags, social pills, footer bar. Dark mode lowers the white fill alpha so text stays AA-readable. |
+| Glass | `--glass-bg`, `--glass-bg-hover`, `--glass-border`, `--glass-shine`, `--glass-shine-weak`, `--glass-blur`, `--glass-shadow` | iOS-26-style liquid-glass bubble recipe (white 5% fill, blur 5px, inset highlights, top + left shine hairlines via pseudo-elements) applied to every surface component: nav pill, buttons, facts card, stack rows, project cards, tags, social pills, footer bar. Identical values in both color schemes. |
 | Type | `--font-display` (Fraunces), `--font-body` (Inter), `--fs-sm` → `--fs-display` | Modular scale (~1.2), fluid at the top end via `clamp()`. Two Google Fonts families, loaded via `<link>`. |
 | Spacing | `--sp-1` (4px) → `--sp-9` (fluid ~80–136px) | 4px base scale. |
 | Shape | `--radius-sm` (4px), `--radius-bubble` (20px, all glass cards; pills use 999px) | |
@@ -44,6 +44,10 @@ properties under `prefers-color-scheme: dark`.
 - **Scroll-spy** sets `aria-current` on the active nav link.
 - **Backdrop glow field**: two fixed radial glows drift very slowly behind
   the page so the glass has something to refract; static under reduced motion.
+- **Circuit-web canvases** in the hero and contact sections: drifting nodes,
+  proximity-linked traces, and gold pulses traveling the edges. Paused when
+  offscreen or the tab is hidden; renders a single static frame under reduced
+  motion.
 - **Specular highlight**: a soft light spot follows the pointer across glass
   bubbles on hover (fine-pointer devices only, disabled under reduced motion).
 - **Nairobi clock** in the footer via `Intl.DateTimeFormat` (`Africa/Nairobi`).
