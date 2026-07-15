@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emmanuel Amdany — Full-Stack Developer</title>
-  <meta name="description" content="Emmanuel Amdany is a full-stack developer and mobile app specialist in Nairobi, Kenya. Selected work, stack, and contact.">
-  <meta property="og:title" content="Emmanuel Amdany — Full-Stack Developer">
-  <meta property="og:description" content="Full-stack developer & mobile app specialist in Nairobi, Kenya.">
+  <title>EA Labs — Full-Stack Web & Mobile Engineering</title>
+  <meta name="description" content="EA Labs is a Nairobi-based software studio building full-stack web and mobile applications. Founded by Emmanuel Amdany. Selected work, stack, and contact.">
+  <meta property="og:title" content="EA Labs — Full-Stack Web & Mobile Engineering">
+  <meta property="og:description" content="A Nairobi-based software studio building full-stack web & mobile apps. Founded by Emmanuel Amdany.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://iamdanyyy.github.io/portfolio/">
-  <meta property="og:image" content="https://rfojgjgduxkuaighcvkt.supabase.co/storage/v1/object/public/dev%20portfolio/portrait.jpg">
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <meta property="og:image" content="assets/ea-logo.png">
+  <link rel="icon" type="image/png" href="assets/ea-favicon.png">
+  <link rel="apple-touch-icon" href="assets/ea-favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +23,10 @@
 
   <header class="site-head" id="site-head">
     <nav class="site-nav container" aria-label="Primary">
-      <a class="brand" href="#top">Emmanuel&nbsp;Amdany</a>
+      <a class="brand" href="#top" aria-label="EA Labs — home">
+        <img class="brand-logo" src="assets/ea-logo.png" alt="" width="1600" height="1000">
+        <span class="brand-word">EA&nbsp;Labs</span>
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
         <span class="nav-toggle-bar" aria-hidden="true"></span>
         <span class="nav-toggle-bar" aria-hidden="true"></span>
@@ -44,13 +48,13 @@
     <section class="hero container" aria-labelledby="hero-title">
       <canvas class="circuit" aria-hidden="true"></canvas>
       <div class="hero-copy">
-        <p class="hero-badge reveal"><span class="pulse-dot" aria-hidden="true"></span>Open to new opportunities — Nairobi, Kenya</p>
-        <h1 class="hero-title reveal" id="hero-title">Emmanuel<br>Amdany</h1>
-        <p class="hero-role reveal">Full-stack developer &amp; mobile app specialist.</p>
+        <p class="hero-badge reveal"><span class="pulse-dot" aria-hidden="true"></span>Available for new projects — Nairobi, Kenya</p>
+        <h1 class="hero-title reveal" id="hero-title">EA&nbsp;Labs</h1>
+        <p class="hero-role reveal">Full-stack web &amp; mobile engineering.</p>
         <p class="hero-lede reveal">
-          I transform complex problems into elegant, scalable solutions — building web
-          and mobile applications that deliver exceptional user experiences and drive
-          real business value.
+          EA Labs is a Nairobi-based software studio, turning complex problems into
+          elegant, scalable solutions — building web and mobile applications that
+          deliver exceptional user experiences and drive real business value.
         </p>
         <div class="hero-actions reveal">
           <a class="btn btn-primary" href="#work">
@@ -60,8 +64,8 @@
           <a class="lnk" href="#contact">Get in touch</a>
         </div>
       </div>
-      <figure class="hero-photo reveal">
-        <img src="https://rfojgjgduxkuaighcvkt.supabase.co/storage/v1/object/public/dev%20portfolio/portrait.jpg" alt="Portrait of Emmanuel Amdany" width="1328" height="1328" fetchpriority="high">
+      <figure class="hero-logo reveal">
+        <img src="assets/ea-logo.png" alt="EA Labs logo" width="1600" height="1000" fetchpriority="high">
       </figure>
     </section>
 
@@ -72,12 +76,15 @@
         <h2 id="about-title">About</h2>
       </header>
       <div class="about-grid">
+        <figure class="about-photo glass reveal">
+          <img src="https://rfojgjgduxkuaighcvkt.supabase.co/storage/v1/object/public/dev%20portfolio/portrait.jpg" alt="Portrait of Emmanuel Amdany, founder of EA Labs" width="1328" height="1328" loading="lazy">
+        </figure>
         <div class="about-copy reveal">
           <p class="lead">
-            I'm a dedicated software developer with a passion for crafting high-quality
-            applications that solve real-world problems. My work spans full-stack web
-            development and mobile apps, with a focus on scalable, maintainable
-            solutions.
+            I'm Emmanuel Amdany, founder of EA Labs — a dedicated software developer
+            with a passion for crafting high-quality applications that solve real-world
+            problems. My work spans full-stack web development and mobile apps, with a
+            focus on scalable, maintainable solutions.
           </p>
           <p>
             With a strong foundation in computer science and a continuous-learning
@@ -88,26 +95,28 @@
             digging through new music.
           </p>
         </div>
-        <aside class="about-facts glass reveal" aria-label="Quick facts">
-          <dl>
-            <div class="fact">
-              <dt>Education</dt>
-              <dd>BSc Computer Science, Kenyatta University <span class="fact-note">2022 — present</span></dd>
-            </div>
-            <div class="fact">
-              <dt>Certification</dt>
-              <dd>Android Development — Udemy <span class="fact-note">Kotlin &amp; Jetpack Compose, 2024 – 2025</span></dd>
-              <a class="lnk" href="assets/udemy-android-development-certificate.pdf" target="_blank" rel="noopener" download>
-                Android Certification
-                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8m0 0 3-3m-3 3-3-3M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-            <div class="fact">
-              <dt>Experience</dt>
-              <dd>3+ years, 20+ projects completed</dd>
-            </div>
-          </dl>
-        </aside>
+        <dl class="about-facts" aria-label="Quick facts">
+          <div class="fact glass reveal">
+            <dt>Role</dt>
+            <dd>Founder &amp; Lead Developer, EA Labs</dd>
+          </div>
+          <div class="fact glass reveal">
+            <dt>Education</dt>
+            <dd>BSc Computer Science, Kenyatta University <span class="fact-note">2022 — present</span></dd>
+          </div>
+          <div class="fact glass reveal">
+            <dt>Certification</dt>
+            <dd>Android Development — Udemy <span class="fact-note">Kotlin &amp; Jetpack Compose, 2024 – 2025</span></dd>
+            <a class="lnk" href="assets/udemy-android-development-certificate.pdf" target="_blank" rel="noopener" download>
+              Certificate
+              <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8m0 0 3-3m-3 3-3-3M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="fact glass reveal">
+            <dt>Experience</dt>
+            <dd>3+ years, 20+ projects completed</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -273,7 +282,7 @@
       </header>
       <div class="contact-body">
         <p class="contact-lede reveal">
-          I'm always interested in new opportunities and exciting projects. Whether
+          EA Labs is always interested in new projects and collaborations. Whether
           you have a question or just want to say hi — reach out.
         </p>
         <a class="contact-email reveal" href="mailto:emmanuelamdany1@gmail.com">emmanuelamdany1@gmail.com</a>
@@ -309,7 +318,10 @@
 
   <footer class="site-foot">
     <div class="container foot-grid">
-      <p>&copy; 2026 Emmanuel Amdany</p>
+      <a class="foot-brand" href="#top" aria-label="EA Labs — home">
+        <img class="foot-logo" src="assets/ea-logo.png" alt="EA Labs" width="1600" height="1000">
+        <span>&copy; 2026 EA Labs — Emmanuel Amdany</span>
+      </a>
       <ul class="foot-social" aria-label="Social profiles">
         <li><a href="https://github.com/iamdanyyy" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon icon-social" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
         <li><a href="https://linkedin.com/in/emmanuel-amdany-85ba23240" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon icon-social" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></li>

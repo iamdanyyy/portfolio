@@ -276,12 +276,23 @@ a {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
   font-family: var(--font-display);
   font-size: var(--fs-md);
   font-weight: 600;
   text-decoration: none;
   letter-spacing: -0.01em;
+  color: var(--ink);
 }
+.brand-logo {
+  height: 2.2em;
+  width: auto;
+  display: block;
+  border-radius: 7px;
+}
+.brand-word { color: var(--ink); }
 
 .site-menu {
   display: flex;
@@ -455,6 +466,20 @@ a {
   border-radius: calc(var(--radius-bubble) - 6px);
 }
 
+/* Hero brand logo (studio identity) — self-contained tile, no glass frame */
+.hero-logo {
+  margin: 0;
+  justify-self: center;
+  width: 100%;
+}
+.hero-logo img {
+  width: 100%;
+  height: auto;
+  max-width: 30rem;
+  border-radius: var(--radius-bubble);
+  filter: drop-shadow(0 20px 44px rgba(0, 0, 0, 0.30));
+}
+
 @media (min-width: 860px) {
   .hero {
     grid-template-columns: repeat(12, 1fr);
@@ -465,6 +490,10 @@ a {
     justify-self: end;
     /* photo hangs slightly lower than the text block — deliberate offset */
     translate: 0 var(--sp-5);
+  }
+  .hero-logo {
+    grid-column: 8 / 13;
+    justify-self: end;
   }
 }
 
@@ -517,17 +546,38 @@ a {
 }
 
 .about-facts {
-  padding: var(--sp-6);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+  margin: 0;
+}
+@media (min-width: 560px) {
+  .about-facts { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Founder portrait — lives with the personal bio */
+.about-photo {
+  margin: 0;
+  padding: var(--sp-2);
   align-self: start;
+  max-width: 18rem;
+}
+.about-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: calc(var(--radius-bubble) - 6px);
 }
 
-.about-facts dl { margin: 0 0 var(--sp-5); }
-
-.fact + .fact {
-  margin-top: var(--sp-5);
-  padding-top: var(--sp-5);
-  border-top: 1px solid var(--line-soft);
+.fact {
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
 }
+.fact .lnk { margin-top: auto; padding-top: var(--sp-3); }
 
 .fact dt {
   font-size: var(--fs-sm);
@@ -554,8 +604,15 @@ a {
   .about-grid {
     grid-template-columns: repeat(12, 1fr);
   }
-  .about-copy { grid-column: 1 / 8; }
-  .about-facts { grid-column: 9 / 13; }
+  .about-copy { grid-column: 1 / 8; grid-row: 1; align-self: center; }
+  .about-photo {
+    grid-column: 8 / 13;
+    grid-row: 1;
+    max-width: none;
+    align-self: stretch;
+  }
+  .about-photo img { height: 100%; aspect-ratio: auto; }
+  .about-facts { grid-column: 1 / 13; grid-row: 2; grid-template-columns: repeat(4, 1fr); }
 }
 
 /* ---------- Stack ---------- */
@@ -784,6 +841,21 @@ a {
   justify-content: space-between;
   gap: var(--sp-3) var(--sp-6);
   padding: var(--sp-4) var(--sp-5);
+}
+
+.foot-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  color: var(--ink-mute);
+  text-decoration: none;
+}
+.foot-brand:hover { color: var(--ink); }
+.foot-logo {
+  height: 2.6em;
+  width: auto;
+  display: block;
+  border-radius: 7px;
 }
 
 .foot-social {
