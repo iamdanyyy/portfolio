@@ -615,6 +615,42 @@ a {
   .about-facts { grid-column: 1 / 13; grid-row: 2; grid-template-columns: repeat(4, 1fr); }
 }
 
+/* ---------- Services ---------- */
+.service-list {
+  display: grid;
+  gap: var(--sp-4);
+}
+@media (min-width: 700px) {
+  .service-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+.service {
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.service-index {
+  margin: 0;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.service h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.service p {
+  margin: 0;
+  color: var(--ink-mute);
+}
+
 /* ---------- Stack ---------- */
 .stack-list {
   margin: 0;
